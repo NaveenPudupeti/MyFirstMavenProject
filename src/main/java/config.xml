@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Bean definitions here -->
+
+<bean name="cus" class="com.java.setterInjection.myFirstProject.Customer">
+<property name="name">
+<value>Naveen</value>
+</property>
+
+<property name="mobile">
+<value>879765755</value>
+</property>
+
+<property name="email">
+<value>naveen18@gmail.com</value>
+</property>
+
+<property name="address">
+<list>
+  <value>Hyderabad</value>
+  <value>Chennai</value>
+  <value>Bangolre</value>
+  <value>Tirupati</value>
+</list>
+</property>
+
+</bean>
+
+<bean name="ord" class="com.java.setterInjection.myFirstProject.Order">
+<property name="productName">
+<value>Mac Book</value>
+</property>
+
+<property name="productId">
+<value>1122546</value>
+</property>
+
+
+
+<property name="customer">
+<ref bean = "cus"></ref>
+</property>
+</bean>
+</beans>
